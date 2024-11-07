@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
     <title>Contacto</title>
     <link rel="stylesheet" href="/CSS/contacto.css">
     <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
@@ -22,24 +24,34 @@
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
-        <form>
+
+        <form id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Nombre y apellido" required>
+                <input type="text" id="nombre" placeholder="Nombre y apellido" required>
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="input-box">
-                <input type="email" required placeholder="Correo electrónico">
+                <input type="email" id="correo" placeholder="Correo electrónico" required>
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Asunto">
+                <input type="text" id="asunto" placeholder="Asunto" required>
                 <i class="fa-solid fa-pen-to-square"></i>
             </div>
             <div class="input-box">
-                <textarea placeholder="Escribe tu mensaje..."></textarea>
+                <textarea id="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
             </div>
             <button type="submit">Enviar mensaje</button>
+            <button type="button" id="regresar" onclick="window.location.href='/index.html';">
+                Regresar a la página principal
+            </button>
         </form>
     </div>
+
+    <script src="/javascript/validación.js"></script>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", validarFormulario);
+    </script>
 </body>
 </html>

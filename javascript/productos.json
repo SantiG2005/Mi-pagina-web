@@ -1,0 +1,65 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Watch Dogs",
+        "precio": 3500,
+        "jugadores": 3,
+        "microfono": 4,
+        "controles": 5,
+        "imagen": "/assets/img/anuncio1.jpg",
+        "url": "/templates/anuncio.html"
+      },
+      {
+        "id": 2,
+        "nombre": "Halo Reach",
+        "precio": 4000,
+        "jugadores": 3,
+        "microfono": 3,
+        "controles": 4,
+        "imagen": "/assets/img/anuncio2.jpg",
+        "url": "/templates/anuncio2.html"
+      },
+      {
+        "id": 3,
+        "nombre": "Tomb Raider",
+        "precio": 5000,
+        "jugadores": 3,
+        "microfono": 5,
+        "controles": 4,
+        "imagen": "/assets/img/anuncio3.jpg",
+        "url": "/templates/anuncio3.html"
+      },
+      {
+        "id": 4,
+        "nombre": "Gears of War 2",
+        "precio": 6500,
+        "jugadores": 3,
+        "microfono": 3,
+        "controles": 4,
+        "imagen": "/assets/img/anuncio4.jpg",
+        "url": "/templates/anuncio4.html"
+      },
+      {
+        "id": 5,
+        "nombre": "Man in Black Alien Crisis",
+        "precio": 4500,
+        "jugadores": 2,
+        "microfono": 3,
+        "controles": 2,
+        "imagen": "/assets/img/anuncio5.jpg",
+        "url": "/templates/anuncio5.html"
+      },
+      {
+        "id": 6,
+        "nombre": "Metal Gear Solid V",
+        "precio": 7500,
+        "jugadores": 5,
+        "microfono": 5,
+        "controles": 4,
+        "imagen": "/assets/img/anuncio6.jpg",
+        "url": "/templates/anuncio6.html"
+      }
+    ]
+  }
+  

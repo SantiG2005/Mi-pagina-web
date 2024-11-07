@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer House</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/index.html">
+                    <p>Gamer House</p>
+                </a>
+
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="/assets/img/header.jpg" alt="Logo Gamer House">
+                    </a>
+                </div>
+
+                <nav id="navegacion" class="navegacion">
+                    <a href="/templates/nosotros.html">Nosotros</a>
+                    <a href="/templates/anuncios.html">Anuncios</a>
+                    <a href="/templates/contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <h1>¡Los Mejores Juegos de la XBOX 360!</h1>
+        </div>
+    </header>
+
+    <section class="contenedor seccion">
+        <h2 class="fw-300 centrar-texto">Mas Sobre Nosotros</h2>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="/assets/img/icono1.svg" width="40px" alt="Icono de Servicios">
+                <h3>Servicios</h3>
+                <p>Ofrecemos solo los mejores juegos destinados para ofrecer un servicio al cliente excepcional. Nuestro equipo altamente capacitado está siempre disponible para asesorar y ayudar a nuestros clientes en cada paso del proceso de compra.</p>
+            </div>
+            <div class="icono">
+                <img src="/assets/img/icono2.svg" width="50px" alt="Icono de Transporte">
+                <h3>Transporte</h3>
+                <p>Desde el momento en que realizas la compra hasta la entrega final el proceso es fluido y rápido. La empresa se asegura de embalar cuidadosamente los videojuegos para evitar cualquier daño durante el envío.</p>
+            </div>
+            <div class="icono">
+                <img src="/assets/img/icono3.svg" width="30px" alt="Icono de Valoración">
+                <h3>Valoración</h3>
+                <p>Hemos logrado generar un reconocimiento destacable dentro del mercado. En numerosas ocasiones hemos sido premiados y reconocidos por nuestro compromiso continuo con la excelencia empresarial.</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="seccion contenedor">
+        <h2 class="fw-300 centrar-texto">Los Juegos más Vendidos</h2>
+        
+    <div class="filtro-precio">
+        <label for="minPrecio">Precio Mínimo:</label>
+        <input type="number" id="minPrecio" name="minPrecio" placeholder="Min" value="0" min="0">
+
+        <label for="maxPrecio">Precio Máximo:</label>
+        <input type="number" id="maxPrecio" name="maxPrecio" placeholder="Max" value="1000" min="0">
+
+        <button id="filtrar">Filtrar</button>
+    </div>
+
+        <div class="contenedor-anuncios">
+            <!-- Los anuncios se cargarán aquí mediante JavaScript -->
+        </div>
+        <div class="ver-todas">
+            <a href="/templates/anuncios.html" class="boton boton-verde">Ver Todos</a>
+        </div>
+    </main>
+
+    <section class="imagen-contacto">
+        <div class="contenedor contenido-contacto">
+            <h2>¡Contactanos!</h2>
+            <p>Envíanos tus datos al formulario</p>
+            <a href="/templates/contacto.html" class="boton boton-amarillo">Contactanos</a>
+        </div>
+    </section>
+
+    <h3 class="centrar-texto fw-300">Reseñas</h3>
+    <div class="seccion-inferior contenedor seccion">
+
+        <section class="blog">
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <img src="/assets/img/blog1.jpg" alt="Watch Dogs">
+                </div>
+                <div class="texto-entrada">
+                    <a href="#">
+                        <h4>Watch Dogs</h4>
+                    </a>
+                    <p>Lanzado en: <span>27/04/2014</span> por: <span>Ubisoft</span></p>
+                    <p>Una experiencia de juego inolvidable que ofrece una ambientación impresionante en la ciudad de Chicago, mecánicas revolucionarias de hacking y una jugabilidad fluida y estratégica. Con un modo multijugador innovador y una banda sonora envolvente, este título de acción y aventura es una apuesta segura para los amantes de los videojuegos.</p>
+                </div>
+            </article>
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <img src="/assets/img/blog2.jpg" alt="Halo Reach">
+                </div>
+                <div class="texto-entrada">
+                    <a href="#">
+                        <h4>Halo Reach</h4>
+                    </a>
+                    <p>Lanzado en: <span>14/07/2010</span> por: <span>Bungie Studios</span></p>
+                    <p>Un shooter en primera persona que te transporta al universo futurista de Halo. Con una campaña emocionante y multijugador frenético, este juego ofrece acción sin descanso y momentos épicos, con modos personalizables e innumerables horas de diversión para los amantes del género.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="blog">
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <img src="/assets/img/blog3.jpg" alt="Tomb Raider">
+                </div>
+                <div class="texto-entrada">
+                    <a href="#">
+                        <h4>Tomb Raider</h4>
+                    </a>
+                    <p>Lanzado en: <span>05/04/2010</span> por: <span>Crystal Dynamics</span></p>
+                    <p>Es un juego de acción y aventura que te sumerge en la piel de la intrépida Lara Croft. Con gráficos impresionantes, una narrativa emocionante y desafiantes puzles, este título te llevará a explorar tumbas antiguas enfrentándote a peligrosos enemigos. Prepárate para vivir una experiencia épica llena de adrenalina.</p>
+                </div>
+            </article>
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <img src="/assets/img/blog4.jpg" alt="Gears of War 2">
+                </div>
+                <div class="texto-entrada">
+                    <a href="#">
+                        <h4>Gears of War 2</h4>
+                    </a>
+                    <p>Lanzado en: <span>08/10/2008</span> por: <span>Epic Games</span></p>
+                    <p>Un juego de disparos en tercera persona que te sumerge en un mundo postapocalíptico lleno de criaturas monstruosas. Con una jugabilidad intensa y emocionantes batallas cooperativas, este título ofrece una experiencia única llena de acción y suspenso.</p>
+                </div>
+            </article>
+        </section>
+
+    </div>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="/templates/nosotros.html">Nosotros</a>
+                <a href="/templates/anuncios.html">Anuncios</a>
+                <a href="/templates/contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservados 2024 &copy;</p>
+        </div>
+    </footer>
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>
