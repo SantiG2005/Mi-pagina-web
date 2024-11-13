@@ -9,47 +9,71 @@
     <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="box-info">
-            <h1>CONTÁCTATE CON NOSOTROS</h1>
-            <div class="data">
-                <p><i class="fa-solid fa-phone"></i> +54 261 786 8679</p>
-                <p><i class="fa-solid fa-envelope"></i> Gamer House@gmail.com</p>
-                <p><i class="fa-solid fa-location-dot"></i> 14493 Imani Locks Suite 896 West Micheal</p>
-            </div>
-            <div class="links">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/index.html">
+                    <p>Gamer House</p>
+                </a>
+                <nav id="navegacion" class="navegacion">
+                    <a href="/templates/nosotros.html">Nosotros</a>
+                    <a href="/templates/anuncios.html">Anuncios</a>
+                    <a href="/templates/contacto.html">Contacto</a>
+                </nav>
             </div>
         </div>
+    </header>
 
-        <form id="contact-form">
-            <div class="input-box">
-                <input type="text" id="nombre" placeholder="Nombre y apellido" required>
-                <i class="fa-solid fa-user"></i>
+    <section class="contacto">
+        <div class="container">
+            <div class="box-info">
+                <h1>CONTÁCTATE CON NOSOTROS</h1>
+                <div class="data">
+                    <p><i class="fa-solid fa-phone"></i> +54 261 786 8679</p>
+                    <p><i class="fa-solid fa-envelope"></i> GamerHouse@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 14493 Imani Locks Suite 896 West Micheal</p>
+                </div>
+                <div class="links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="email" id="correo" placeholder="Correo electrónico" required>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="text" id="asunto" placeholder="Asunto" required>
-                <i class="fa-solid fa-pen-to-square"></i>
-            </div>
-            <div class="input-box">
-                <textarea id="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-            </div>
-            <button type="submit">Enviar mensaje</button>
-            <button type="button" id="regresar" onclick="window.location.href='/index.html';">
-                Regresar a la página principal
-            </button>
-        </form>
-    </div>
+
+            <form id="contact-form">
+                <div class="input-box">
+                    <input type="text" id="nombre" placeholder="Nombre y apellido" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="correo" placeholder="Correo electrónico" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="asunto" placeholder="Asunto" required>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <div class="input-box">
+                    <textarea id="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="/templates/nosotros.html">Nosotros</a>
+                <a href="/templates/anuncios.html">Anuncios</a>
+                <a href="/templates/contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </footer>
 
     <script src="/javascript/validación.js"></script>
-
     <script>
         document.getElementById("contact-form").addEventListener("submit", validarFormulario);
     </script>

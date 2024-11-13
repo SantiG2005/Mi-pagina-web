@@ -1,32 +1,37 @@
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(/assets/img/fondo-gamer.webp);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(/assets/img/fondo-gamer.webp);
     background-size: cover;
     background-position: center down;
     background-repeat: no-repeat;
 }
+
 .container {
-    display:grid;
-    grid-template-columns: repeat(2,50%);
-    padding:20px;
-    gap:10px;
-    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;  /* Aseguramos que el contenido esté encima del header */
+    padding-top: 120px; /* Espacio para el header */
+    padding-bottom: 80px; /* Espacio para el footer */
 }
 
 .box-info {
-    color:#fff;
-    display:flex;
+    color: #fff;
+    display: flex;
     flex-direction: column;
-    gap:50px;
+    gap: 50px;
 }
 
 .box-info > h1 {
@@ -37,7 +42,7 @@ body {
 .data {
     display: flex;
     flex-direction: column;
-    gap:25px
+    gap: 25px;
 }
 
 .data > p {
@@ -45,16 +50,14 @@ body {
 }
 
 .data > p > i {
-    color:rgb(15, 156, 15);
+    color: rgb(15, 156, 15);
     margin-right: 10px;
-    font-size:25px;
+    font-size: 25px;
 }
 
-
-
 .links {
-    display:flex;
-    gap:15px;
+    display: flex;
+    gap: 15px;
 }
 
 .links > a {
@@ -67,49 +70,47 @@ body {
 }
 
 .links > a > i {
-    color:#fff;
+    color: #fff;
     line-height: 40px;
     font-size: 20px;
 }
 
 form {
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
-    gap:15px;
+    gap: 15px;
 }
 
 .input-box {
-    position:relative;
+    position: relative;
 }
 
 .input-box > input {
     width: 100%;
     height: 40px;
     padding: 0 10px;
-    outline:none;
+    outline: none;
     background: rgba(255 255 255 / .1);
-    border:3px solid transparent;
+    border: 3px solid transparent;
     letter-spacing: 1px;
-    transition:.3s;
-    color:#fff;
-    
+    transition: .3s;
+    color: #fff;
 }
 
 .input-box > input::placeholder,
 .input-box > textarea::placeholder {
-    color:#a3a3a3;
-    
+    color: #a3a3a3;
 }
 
 .input-box > input:focus::placeholder,
 .input-box > textarea:focus::placeholder {
-    color:transparent;
+    color: transparent;
 }
 
 .input-box > input:focus,
 .input-box > textarea:focus {
-    border-bottom:3px solid rgb(15, 156, 15);
+    border-bottom: 3px solid rgb(15, 156, 15);
     animation: shake .2s;
 }
 
@@ -118,26 +119,25 @@ form {
     height: 130px;
     padding: 10px;
     background: rgba(255 255 255 / .1);
-    border:3px solid transparent;
+    border: 3px solid transparent;
     letter-spacing: 1px;
     outline: none;
-    transition:.3s;
-    color:#fff;
+    transition: .3s;
+    color: #fff;
     letter-spacing: 1.5px;
 }
 
-
 .input-box > i {
-    position:absolute;
-    top:50%;
+    position: absolute;
+    top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    color:rgba(255 255 255 / .3);
+    color: rgba(255 255 255 / .3);
     transition: .3s;
 }
 
 .input-box > input:focus ~ i {
-    color:rgb(15, 156, 15)
+    color: rgb(15, 156, 15);
 }
 
 form > button {
@@ -145,8 +145,8 @@ form > button {
     padding: 10px;
     outline: none;
     background: rgb(15, 156, 15);
-    color:#fff;
-    border:none;
+    color: #fff;
+    border: none;
     transition: .1s;
     cursor: pointer;
     font-size: 1rem;
@@ -157,26 +157,134 @@ form > button:hover,
     background: rgb(172, 16, 47);
 }
 
-@keyframes shake { 
-    0%, 100% {transform: translateX(0);} 
-    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
-    20%, 40%, 60%, 80% {transform: translateX(10px);} 
- }
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
 
+.site-header {
+    position: fixed; /* Hace que el header esté fijo en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Asegura que el header esté encima del contenido */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    color: white;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+}
 
-@media screen and (max-width:600px) {
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.barra p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.barra a {
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    gap: 25px;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: rgb(15, 156, 15);
+}
+
+.site-footer {
+    position: fixed; /* Hace que el footer esté fijo en la parte inferior */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 999; /* Asegura que el footer esté encima del contenido */
+}
+
+.contenedor-footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: rgb(15, 156, 15);
+}
+
+@media screen and (max-width: 600px) {
     .container {
         width: 95%;
         display: flex;
         flex-direction: column;
-        gap:20px;
+        gap: 20px;
     }
 
     .box-info {
-        gap:15px;
+        gap: 15px;
     }
 
     .box-info > h1 {
         font-size: 1.5rem;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .site-footer {
+        padding: 15px 0;
     }
 }
