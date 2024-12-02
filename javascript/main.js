@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Función para cargar productos
     function cargarProductos() {
-        const url = '../javascript/productos.json';  // Ruta al archivo JSON
+        const url = '../javascript/productos.json';  // Verifica la ruta de tu archivo JSON
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -18,11 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function getProductosAMostrar(productos) {
-        const cantidad = getCantidadDeProductosParaMostrar();
-        return productos.slice(0, cantidad);  
-    }
-
     // Función para obtener la cantidad de productos a mostrar, dependiendo de la página
     function getCantidadDeProductosParaMostrar() {
         if (window.location.pathname.includes('index.html')) {
@@ -30,6 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return Infinity;  // Muestra todos los productos (sin límite)
     }
+
+    // Función para limitar los productos que se mostrarán en la página
+    function getProductosAMostrar(productos) {
+        const cantidad = getCantidadDeProductosParaMostrar();
+        return productos.slice(0, cantidad);  // Limita la cantidad de productos a mostrar
+    }
+
     // Función para filtrar los productos por precio
     function filtrarProductosPorPrecio(productos) {
         const minPrecio = parseFloat(document.getElementById('minPrecio').value) || 0;
@@ -44,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para mostrar los productos en la página
     function mostrarProductos(productos) {
         const contenedor = document.querySelector('.contenedor-anuncios');
-        contenedor.innerHTML = ''; 
+        contenedor.innerHTML = '';  // Limpiar contenido previo
 
         productos.forEach(producto => {
             const anuncioHTML = `
@@ -67,10 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
+    // Función para aplicar el filtro de precio
     function aplicarFiltro() {
-        
-        const url = '../javascript/productos.json';  
+        const url = '../javascript/productos.json';  // Verifica la ruta de tu archivo JSON
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -80,13 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error al cargar los productos para filtrar:', error));
     }
-    if (window.location.pathname.includes('index.html')) {
-        // Asignar evento al botón de filtro solo si estamos en la página indicada
-        const botonFiltrar = document.getElementById('filtrar');
-        if (botonFiltrar) {
-            botonFiltrar.addEventListener('click', aplicarFiltro);
-        }
+
+    // Asignamos el evento de filtrado al botón "Filtrar"
+    const botonFiltrar = document.getElementById('filtrar');
+    if (botonFiltrar) {
+        botonFiltrar.addEventListener('click', aplicarFiltro);
     }
 
+    // Cargar los productos inicialmente
     cargarProductos();
 });

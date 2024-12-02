@@ -64,15 +64,17 @@
     <main class="seccion contenedor">
         <h2 class="fw-300 centrar-texto">Los Juegos más Vendidos</h2>
         
-    <div class="filtro-precio">
-        <label for="minPrecio">Precio Mínimo:</label>
-        <input type="number" id="minPrecio" name="minPrecio" placeholder="Min" value="0" min="0">
-
-        <label for="maxPrecio">Precio Máximo:</label>
-        <input type="number" id="maxPrecio" name="maxPrecio" placeholder="Max" value="1000" min="0">
-
-        <button id="filtrar">Filtrar</button>
-    </div>
+        <div class="filtro-precio"> 
+            <label for="minPrecio">Precio Mínimo:</label>
+            <input type="number" id="minPrecio" name="minPrecio" placeholder="Min" value="0" min="0">
+        
+            <label for="maxPrecio">Precio Máximo:</label>
+            <input type="number" id="maxPrecio" name="maxPrecio" placeholder="Max" value="0" min="0">
+        
+            <button id="filtrar">Filtrar</button>
+        </div>
+        
+        
 
         <div class="contenedor-anuncios">
             <!-- Los anuncios se cargarán aquí mediante JavaScript -->

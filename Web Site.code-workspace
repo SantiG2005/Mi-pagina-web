@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../Web Site"
+		},
+		{
+			"path": "../../Downloads/VSC BASE"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Website"
+	}
+}
